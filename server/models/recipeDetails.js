@@ -2,7 +2,11 @@ import mongoose from 'mongoose';
 
 //structure of a recipe
 const recipeSchema = mongoose.Schema({
-    title: String,
+    recipeName: String,
+    description: String,
+    servings: String,
+    timeNeeded: String,
+    ingredients: [String],
     steps: [String],
     notes: String,
     selectedFile: String,

@@ -1,54 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline, Grid, TextField, Typography, Button, Paper, InputAdornment, Toolbar, AppBar } from '@material-ui/core';
 import EmailIcon from '@material-ui/icons/Email';
 import LockIcon from '@material-ui/icons/Lock';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        minHeight: '100vh',
-        background: '#F7F7F7',
-    },
-    detailsPaper: {
-        width: '50vw',
-        height: '70vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-
-    },
-    contentDiv: {
-        display: 'flex',
-        flexDirection: 'column',
-        minWidth: '300',
-        maxWidth: '400',
-    },
-    fields: {
-        minWidth: '40vw',
-    },
-    createAccountTitle: {
-        fontFamily: 'Fira Sans',
-    },
-    webName: {
-        fontFamily: 'Nunito',
-        // pushes the login button to the end
-        flex: '1'        
-    },
-    webNameGrid: {
-        paddingBottom: '1em'
-    },
-    createAccountTitleGrid: {
-        paddingBottom: '1em'
-    },
-    loginButton: {
-        textTransform: 'capitalize',
-    },
-    buttonHeightSpacing: {
-        height: '10px'
-    },
-}
-));
+import useStyles from './styles';
 
 export default function SignUpPage() {
     const classes = useStyles();

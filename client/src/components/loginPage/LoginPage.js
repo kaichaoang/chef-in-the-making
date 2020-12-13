@@ -1,68 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { Grid, TextField, Typography, Button, InputAdornment, CssBaseline } from '@material-ui/core';
 import EmailIcon from '@material-ui/icons/Email';
 import LockIcon from '@material-ui/icons/Lock';
-import loginImage from '../../resources/images/login.jpg';
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        minHeight: '100vh',
-        flexGrow: '1',
-    },
-    gridContainer: {
-        minHeight: '100vh',
-    },
-    imageGrid: {
-        minHeight: '100vh',
-        backgroundImage: `url(${loginImage})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'calc(100%) calc(20%)',
-    },
-    loginGrid: {
-        padding: '10px',
-    },
-    contentDiv: {
-        display: 'flex',
-        flexDirection: 'column',
-        minWidth: '300',
-        maxWidth: '400',
-    },
-    webName: {
-        fontFamily: 'Nunito',
-    },
-    buttonHeightSpacing: {
-        height: '10px'
-    },
-    loginButtonDiv: {
-        fontFamily: 'Nunito',
-    },
-    signUpButtonDiv: {
-        fontFamily: 'Nunito',
-    },
-    backToWecomeButtonGrid: {
-
-    },
-    backToWelcomeButton: {
-        textTransform: 'capitalize',
-        fontFamily: 'Nunito',
-    },
-    signUpButtonGrid: {
-
-    },
-    signUpButton: {
-        textTransform: 'capitalize',
-        fontFamily: 'Nunito',
-    },
-    forgetPasswordButtonGrid: {
-
-    },
-    forgetPasswordButton: {
-        fontFamily: 'Nunito',
-    }
-}
-));
+import useStyles from './styles';
 
 export default function LoginPage() {
     const classes = useStyles();

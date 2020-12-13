@@ -7,13 +7,13 @@ import recipeRoutes from './routes/recipes.js';
 
 const app = express();
 
-//every route in recipeRoutes are going to start with /recipes path
-app.use('/recipes', recipeRoutes);
-
 //in case images are too large
 app.use(bodyParser.json({ limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true}));
 app.use(cors());
+
+//every route in recipeRoutes are going to start with /recipes path
+app.use('/recipes', recipeRoutes);
 
 const CONNECTION_URL = 'mongodb+srv://test69:test69@cluster0.7wrhv.mongodb.net/<dbname>?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
