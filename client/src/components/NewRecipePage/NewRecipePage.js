@@ -5,6 +5,8 @@ import { Grid, TextField, Typography, Button, Paper, AppBar, Toolbar, IconButton
 import MenuIcon from '@material-ui/icons/Menu';
 
 import FileBase from 'react-file-base64';
+import { useDispatch } from 'react-redux';
+import { createRecipe } from '../../actions/recipes';
 
 export default function NewRecipePage() {
     const [recipeData, setRecipeData] = useState({
@@ -19,12 +21,16 @@ export default function NewRecipePage() {
     });
     const classes = useStyles();
 
-    const handleSubmit = () => {
-        console.log('dog');
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        dispatch(createRecipe(recipeData));
     };
 
+    const dispatch = useDispatch();
+
     return (
-        <div>
+        <div>   
             <CssBaseline />
             <Grid item className={classes.webNameGrid}>
                 <AppBar position="static">
@@ -49,7 +55,7 @@ export default function NewRecipePage() {
                 </AppBar>
             </Grid>
 
-            <Grid alignItems="center" direction="column" justify="space-between">
+            <Grid container alignItems="center" direction="column" justify="space-between">
                 <Grid item className={classes.paperGrid} align="center">
                     <Paper elevation={3} className={classes.basePaper}>
                         <form autoComplete="off" noValidate className={classes.form} onSubmit={handleSubmit}>

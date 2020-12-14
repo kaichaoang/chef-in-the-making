@@ -32,6 +32,27 @@ export default makeStyles((theme) => ({
         fontFamily: 'Nunito',
         padding: '10px 0px 0px 0px',
     },
+    recipeName: {
+        minWidth: '40vw',
+    },
+    description: {
+        minWidth: '40vw',
+    },
+    servings: {
+        minWidth: '40vw',
+    },
+    timeNeeded: {
+        minWidth: '40vw',
+    },
+    ingredients: {
+        minWidth: '40vw',
+    },
+    steps: {
+        minWidth: '40vw',
+    },
+    notes: {
+        minWidth: '40vw',
+    },
     fileInput: {
         padding: '10px 0px 10px 0px',
     },

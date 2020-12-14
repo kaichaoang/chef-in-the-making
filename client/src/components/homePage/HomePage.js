@@ -1,11 +1,11 @@
 import React from 'react';
 import { Grid, Typography, Button, Toolbar, IconButton, AppBar, CssBaseline } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import useStyles from './styles';
 
 export default function HomePage() {
-    const recipes = useSelector((state) => state.recipes);
+    // const recipes = useSelector((state) => state.recipes);
     const classes = useStyles();
         
     return (

@@ -7,7 +7,16 @@ export const getRecipes = () => async (dispatch) => {
         dispatch({ type: 'FETCH_ALL', payload: data });
         
     } catch (e) {
-        console.log(e.message + 'dog');
+        console.log(e.message);
     }
 }
 
+export const createRecipe = (recipe) => async (dispatch) => {
+    try {
+        const { data } = await api.createRecipe(recipe);
+        dispatch({ type: 'CREATE', payload: data });
+        
+    } catch (e) {
+        console.log(e.message);
+    }
+}

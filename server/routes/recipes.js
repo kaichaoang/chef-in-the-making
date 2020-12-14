@@ -6,6 +6,6 @@ const router = express.Router();
 
 //need this request and response for every single routing callback
 router.get('/', getRecipes);
-router.get('/', createRecipe);
+router.post('/newrecipe', createRecipe); 
 
 export default router;

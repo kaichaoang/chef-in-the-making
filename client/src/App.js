@@ -27,7 +27,7 @@ export default function App() {
                     <Route path="/home" component={HomePage}></Route>
                     <Route path="/login" component={LoginPage}></Route>
                     <Route path="/signup" component={SignUpPage}></Route>
-                    <Route path="/newrecipe" component={NewRecipePage}></Route>
+                    <Route path="/recipes/newrecipe" component={NewRecipePage}></Route>
                 </div>
             </Router>
         </div>
